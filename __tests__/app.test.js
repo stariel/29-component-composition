@@ -7,21 +7,21 @@ import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-import Dashboard from '../src/components/dashboard/dashboard.js';
+import App from '../src/components/app/app.js';
 import NoteCreateForm from '../src/components/note-create-form/note-create-form.js';
 
 
-describe('<Dashboard/> (Enzyme Test)', () => {
+describe('<App/> (Enzyme Test)', () => {
   it('is alive at application start', () => {
-    let app = shallow(<Dashboard/>);
+    let app = shallow(<App/>);
     expect(app.find('h2').exists()).toBeTruthy();
   });
 });
 
-describe('<Dashboard/> (Snapshot Test)', () => {
+describe('<App/> (Snapshot Test)', () => {
   it('renders right', () => {
     const component = renderer.create(
-      <Dashboard />
+      <App />
     );
 
     let tree = component.toJSON();

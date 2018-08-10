@@ -16,6 +16,7 @@ export default class App extends React.Component {
 
     this.addNote = this.addNote.bind(this);
     this.removeNote = this.removeNote.bind(this);
+    this.updateNote = this.updateNote.bind(this);
 
 }
 
@@ -26,14 +27,20 @@ addNote(note) {
 
 removeNote(id) {
     const notes = this.state.notes.filter(note => note.id !== id);
-    this.setState({ notes });
+    this.setState({notes});
+}
+
+updateNote(note) {
+    const notes = this.state.notes.filter(n => n.id !== note.id);
+    notes.push(note);
+    this.setState({notes});
 }
 
   render() {
     return (
         <React.Fragment>
           <NoteCreateForm onSubmit={this.addNote}/>
-          <NoteList notes={this.state.notes} onRemove={this.removeNote}/>
+          <NoteList notes={this.state.notes} onRemove={this.removeNote} onUpdate={this.updateNote}/>
         </React.Fragment>
     );
   }
