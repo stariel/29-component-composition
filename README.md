@@ -1,53 +1,17 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 29: To Do
+![cf](http://i.imgur.com/7v5ASc8.png) 28: Routing and Testing
 ===
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-  * Submit a question, observation, and how long you spent on canvas 
-  
-## Learning Objectives  
-* Students will learn about composition vs inheritance
-* Students will learn to compose react components using props
+##Author:
+Ariel Altaras
 
-## Requirements  
- 
-#### Feature Tasks 
-Refactor and add the following components 
+##Description:
+This app creates and stores notes in the state. The "/" route displays a brief description of the app. The "/dashboard" route allows you to add a note and view existing notes.
 
-###### NoteUpdateForm 
-Create a NoteUpdateForm component that inherits a note through props and onSubmit is able to update the App's state with an updated note.
-
-###### Refactor the NoteItem to have the following behavior
-If the user double clicks on the notes content it should switch to the Edit View  
-* Default view  
-  * Display the notes content and a delete button
-  * Display a delete button that will remove the Note from the application's state
-* Edit View 
-  * Show the NoteUpdateForm and a Cancel Button
-    * onSubmit or click of the cancel button in NoteUpdateForm it should switch back to the default view
-
-###### App Component Tree
-Your components should be nested in the following layout  
-``` 
-App
-  NoteCreateForm
-  NoteList
-    NoteItem
-      NoteUpdateForm
-```
-
-#### Test
-* Test NoteCreateForm
-  * Test your onChange handler
-  * Test your onSubmit handler
-* Test NoteItem
-  * Test the NoteItem's ability to remove a note from the App's state
-* Test NoteUpdateForm
-  * Test the NoteUpdatesForm's ability to update a note in the App's state
-
-#### Documentation  
-Write a description of the project in your README.md
+##Instructions
+After cloning the repo onto your local machine:
+- npm i
+- npm run watch (this should display the application at localhost:8080
+- navigate to "/dashboard" and use the form to create a new note
+- see your note display in the list below the form
+- you can create another note and it will be added to the list
+- you can use the delete button to delete the note
