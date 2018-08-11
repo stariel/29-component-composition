@@ -20,7 +20,7 @@ constructor(props) {
 
   onSubmit(event) {
     event.preventDefault();
-    this.props.onUpdate({ ...this.state});
+    this.props.onUpdate({...this.state});
     this.setState({
       title: '',
       content: '',
@@ -53,7 +53,8 @@ constructor(props) {
           <span>completed</span>
           <input name="completed" type="checkbox" />
         </label>
-          <button type='submit'>Update Note</button>
+          <button type='submit'>update</button>
+          <button onClick={this.onCancel}>cancel</button>
         </form>
       </React.Fragment>
     );
