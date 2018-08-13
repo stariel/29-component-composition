@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import 'jest-enzyme';
-import {Enzyme} from 'enzyme';
+import Enzyme from 'enzyme';
 import { shallow } from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -14,7 +14,7 @@ import NoteCreateForm from '../src/components/note-create-form/note-create-form.
 describe('<App/> (Enzyme Test)', () => {
   it('is alive at application start', () => {
     let app = shallow(<App/>);
-    expect(app.find('h2').exists()).toBeTruthy();
+    expect(app.find('h1').exists()).toBeTruthy();
   });
 });
 

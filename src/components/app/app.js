@@ -39,6 +39,7 @@ updateNote(note) {
   render() {
     return (
         <React.Fragment>
+          <h1>Notes App</h1>
           <NoteCreateForm onSubmit={this.addNote}/>
           <NoteList notes={this.state.notes} onRemove={this.removeNote} onUpdate={this.updateNote}/>
         </React.Fragment>
